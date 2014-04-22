@@ -4,7 +4,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.7.+'
+        classpath 'com.android.tools.build:gradle:0.9.+'
     }
 }
 
@@ -25,7 +25,7 @@ android {
 }
 
 dependencies {
-    instrumentTestCompile 'junit:junit:4.8.1@jar'
+    androidTestCompile 'junit:junit:4.8.1@jar'
 }
 
 version '1.0'
