@@ -185,7 +185,7 @@ public class BmpUtil {
                 (int) (ssBmp.getWidth() * scales.x),
                 (int) (ssBmp.getHeight() * scales.y), true);
 
-        ssBmp.recycle();
+        if (ret != ssBmp) ssBmp.recycle();
         return ret;
     }
 
