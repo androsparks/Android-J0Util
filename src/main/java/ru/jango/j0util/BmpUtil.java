@@ -216,7 +216,11 @@ public class BmpUtil {
         }
     }
 
-    protected static Point extractSize(byte[] data) {
+    /**
+     * Looks through the byte array and calculates size of the picture inside it. Operation is very
+     * fast, as no actual decoding will be done.
+     */
+    public static Point extractSize(byte[] data) {
         final BitmapFactory.Options ops = new BitmapFactory.Options();
         ops.inJustDecodeBounds = true;
         BitmapFactory.decodeByteArray(data, 0, data.length, ops);
