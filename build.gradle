@@ -46,6 +46,8 @@ task makeJar(type: Jar, dependsOn: ':J0Util:compileReleaseJava') {
     destinationDir project.file('result-jars')
     from project.file('build/classes/release'), {
         exclude '**/BuildConfig.class'
+        exclude '**/R.class'
+        exclude '**/R$**.class'
     }
 }
 
